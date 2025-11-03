@@ -8,9 +8,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/recipi/', // 👈 IMPORTANT — matches your GitHub repo name
   server: {
-    port: 5173, // optional
-    open: true, // auto opens in browser
+    port: 5173,
+    open: true,
   },
   build: {
     outDir: 'dist',
