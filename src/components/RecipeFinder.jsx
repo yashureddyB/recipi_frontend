@@ -18,10 +18,9 @@ const RecipeFinder = ({ localRecipes = [] }) => {
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
       );
       const data = await response.json();
-
       const apiRecipes = data.meals && Array.isArray(data.meals) ? data.meals : [];
+      
 
-      // Match local recipes by name
       const userRecipes = localRecipes.filter((r) =>
         r.strMeal.toLowerCase().includes(query.toLowerCase())
       );
@@ -52,6 +51,7 @@ const RecipeFinder = ({ localRecipes = [] }) => {
     }
     return ingredients;
   };
+  
 
   return (
     <div>

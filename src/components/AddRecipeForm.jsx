@@ -99,7 +99,7 @@ const AddRecipeForm = ({ onAddRecipe }) => {
         ></textarea>
 
         <input
-          type="text"
+          type="url"
           name="image"
           placeholder="Image URL (optional)"
           value={formData.image}

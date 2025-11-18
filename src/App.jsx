@@ -7,6 +7,7 @@ import Feedback from "./components/Feedback";
 import RecipeFinder from "./components/RecipeFinder";
 import AddRecipeForm from "./components/AddRecipeForm";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import KitchenTipsAccordion from "./components/KitchenTipsAccordion";
 
 function App() {
   const [localRecipes, setLocalRecipes] = useState([]);
@@ -24,7 +25,8 @@ function App() {
 
   return (
     <Router>
-      <div className="app-container bg-gray-50 min-h-screen">
+      {/* Gradient background */}
+      <div className="app-container min-h-screen bg-gradient-to-br from-amber-50 via-orange-100 to-pink-100">
         <Header />
         <main className="flex flex-col items-center justify-center pt-10 space-y-6">
           <Routes>
@@ -35,6 +37,7 @@ function App() {
                   <Body />
                   <MyCarousel />
                   <RecipeFinder localRecipes={localRecipes} />
+                  <KitchenTipsAccordion />
                   <Feedback />
                 </>
               }
