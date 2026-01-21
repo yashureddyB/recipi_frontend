@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/recipi/',   // MUST match your GitHub repo name
+  base: '/recipi_frontend/',   // MUST match your GitHub repo name
   server: {
     port: 5173,
     open: true,
